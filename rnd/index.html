@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R&D - 140p Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
+
+    <title>140p Studio</title>
+
+    <!-- SEO -->
+    <meta name="description" content="3D visualization and product design studio.">
+    <meta property="og:title" content="140p Studio">
+    <meta property="og:description" content="We create visual solutions that help brands stand out.">
+    <meta property="og:type" content="website">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/main.css">
     <style>
         /* Page-specific styles */
         .page-hero {
@@ -267,110 +273,15 @@
     </style>
 </head>
 <body>
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
-        <svg viewBox="0 0 24 24">
-            <line x1="12" y1="19" x2="12" y2="5"></line>
-            <polyline points="5,12 12,5 19,12"></polyline>
-        </svg>
-    </button>
 
-    <!-- Header -->
-    <header class="header" id="header">
-        <div>
-            <a href="/" class="logo">140p</a>
-        </div>
+<!-- HEADER PARTIAL -->
+<div id="header"></div>
 
-        <nav class="nav-desktop">
-            <div class="nav-links">
-                <a href="works.html" class="nav-link" data-i18n="nav.works">Works</a>
-                <a href="rnd.html" class="nav-link active" data-i18n="nav.rnd">R&D</a>
-                <a href="me.html" class="nav-link" data-i18n="nav.me">Me</a>
-            </div>
-            <div class="header-controls">
-                <!-- Language Switcher -->
-                <div class="lang-switcher-header" id="langSwitcherHeader">
-                    <button class="lang-btn-header active" data-lang="en">EN</button>
-                    <button class="lang-btn-header" data-lang="uk">UA</button>
-                </div>
-                <!-- Theme Toggle -->
-                <button class="theme-toggle-header" id="themeToggleHeader" aria-label="Toggle theme">
-                    <svg class="theme-icon sun-icon" data-theme="light" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="5"/>
-                        <line x1="12" y1="1" x2="12" y2="3"/>
-                        <line x1="12" y1="21" x2="12" y2="23"/>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                        <line x1="1" y1="12" x2="3" y2="12"/>
-                        <line x1="21" y1="12" x2="23" y2="12"/>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                    </svg>
-                    <svg class="theme-icon moon-icon" data-theme="dark" viewBox="0 0 24 24">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                    </svg>
-                    <svg class="theme-icon lime-icon" data-theme="lime" viewBox="0 0 24 24" style="display: none;">
-                        <circle cx="12" cy="12" r="10"/>
-                        <circle cx="12" cy="12" r="3"/>
-                        <line x1="12" y1="2" x2="12" y2="22"/>
-                        <line x1="2" y1="12" x2="22" y2="12"/>
-                        <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
-                        <line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/>
-                    </svg>
-                </button>
-            </div>
-        </nav>
-        <button class="burger-btn" id="burgerBtn" aria-label="Toggle menu">
-            <svg class="burger-icon" viewBox="0 0 24 24">
-                <line x1="4" y1="6" x2="20" y2="6"></line>
-                <line x1="4" y1="12" x2="20" y2="12"></line>
-                <line x1="4" y1="18" x2="20" y2="18"></line>
-            </svg>
-            <svg class="close-icon" viewBox="0 0 24 24">
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-                <line x1="6" y1="18" x2="18" y2="6"></line>
-            </svg>
-        </button>
-    </header>
+<!-- MOBILE MENU PARTIAL -->
+<div id="mobile-menu"></div>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="works.html" style="transition-delay: 0ms;" data-i18n="nav.works">Works</a>
-        <a href="rnd.html" style="transition-delay: 100ms;" data-i18n="nav.rnd">R&D</a>
-        <a href="me.html" style="transition-delay: 200ms;" data-i18n="nav.me">Me</a>
-
-        <!-- Mobile Controls -->
-        <div class="mobile-controls">
-            <div class="mobile-lang-switcher" id="langSwitcherMobile">
-                <button class="mobile-lang-btn active" data-lang="en">EN</button>
-                <button class="mobile-lang-btn" data-lang="uk">UA</button>
-            </div>
-            <button class="mobile-theme-toggle" id="themeToggleMobile" aria-label="Toggle theme">
-                <svg class="theme-icon sun-icon" viewBox="0 0 24 24">
-                    <circle cx="12" cy="12" r="5"/>
-                    <line x1="12" y1="1" x2="12" y2="3"/>
-                    <line x1="12" y1="21" x2="12" y2="23"/>
-                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                    <line x1="1" y1="12" x2="3" y2="12"/>
-                    <line x1="21" y1="12" x2="23" y2="12"/>
-                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                </svg>
-                <svg class="theme-icon moon-icon" viewBox="0 0 24 24">
-                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                </svg>
-                <svg class="theme-icon lime-icon" viewBox="0 0 24 24" style="display: none;">
-                    <circle cx="12" cy="12" r="10"/>
-                    <circle cx="12" cy="12" r="3"/>
-                    <line x1="12" y1="2" x2="12" y2="22"/>
-                    <line x1="2" y1="12" x2="22" y2="12"/>
-                    <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
-                    <line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/>
-                </svg>
-            </button>
-        </div>
-    </div>
+<!-- MAIN CONTENT -->
+<main>
 
     <!-- Page Hero -->
     <section class="page-hero">
@@ -513,55 +424,14 @@
             </div>
         </div>
     </section>
+</body>main>
 
-    <!-- Footer -->
-    <footer class="footer" id="me">
-        <div class="footer-content" id="footerContent">
-            <div class="footer-brand">
-                <h3>140p</h3>
-                <p data-i18n="footer.description">We create visual solutions that help brands stand out and effectively communicate with their audience.</p>
-            </div>
-            <div class="footer-section">
-                <h4 data-i18n="footer.contacts">Contacts</h4>
-                <a href="mailto:hello@140p.studio">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    hello@140p.studio
-                </a>
-            </div>
-            <div class="footer-section">
-                <h4 data-i18n="footer.social">Social Media</h4>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram">
-                        <svg viewBox="0 0 24 24">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="YouTube">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
-                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
-                        </svg>
-                    </a>
-                    <a href="#" aria-label="Telegram">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M22 3L2 10l7 3 9-7-7 8 3 7 7-15z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom" id="footerBottom">
-            <p data-i18n="footer.copyright">© 2026 140p Studio. All rights reserved.</p>
-            <p data-i18n="footer.tagline">Designed with passion</p>
-        </div>
-    </footer>
+<!-- FOOTER PARTIAL -->
+<div id="footer"></div>
 
-    <script src="js/common.js"></script>
-    <script src="js/rnd.js"></script>
+<!-- Scripts -->
+<script type="module" src="../assets/js/common/index.js" defer></script>
+<script src="js/rnd.js"></script>
+
 </body>
 </html>
