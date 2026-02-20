@@ -45,6 +45,7 @@ async function renderWork() {
     setText('[data-work-title]', data.title);
     setText('[data-work-category]', data.category);
     setText('[data-work-description]', data.description);
+    setText('[data-work-seo-description]', data.seoDescription);
 
     const gallery = document.querySelector('[data-work-gallery]');
     if (gallery && work.gallery?.length) {
