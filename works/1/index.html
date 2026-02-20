@@ -38,7 +38,8 @@
         }
 
         .work-header {
-            margin-bottom: 48px;
+            position: absolute;
+            margin-top: -210px;
         }
 
         .work-category {
@@ -336,7 +337,7 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 36.25%; /* 16:9 aspect ratio */
             height: 0;
             overflow: hidden;
             border-radius: 16px;
@@ -424,6 +425,12 @@
 
     <!-- Work Detail Section -->
     <section class="work-detail">
+
+        <div class="work-header">
+            <div class="work-category" data-work-category>Category</div>
+            <h1 class="work-title" data-work-title>Work Title</h1>
+        </div>
+
         <!-- Work Video Section -->
         <section class="work-video-section">
             <div class="video-container">
@@ -434,14 +441,8 @@
                     allowfullscreen>
                 </iframe>
             </div>
-            <p class="video-caption">Behind the scenes of our creative process</p>
+            <p class="work-description" data-work-description>Work description goes here.</p>
         </section>
-
-        <div class="work-header">
-            <div class="work-category" id="workCategory">Category</div>
-            <h1 class="work-title" id="workTitle">Work Title</h1>
-            <p class="work-description" id="workDescription">Work description goes here.</p>
-        </div>
 
         <div class="work-image">
             <img id="workImage" src="/assets/images/works/honey.jpg" alt="Work Image">
@@ -465,12 +466,33 @@
 
 </main>
 
+<main class="work-page">
+
+  <nav data-breadcrumbs></nav>
+
+  <h1 data-work-title></h1>
+  <span data-work-category></span>
+
+  <p data-work-description></p>
+
+  <div class="work-gallery" data-work-gallery></div>
+
+  <div class="work-navigation">
+      <a data-prev></a>
+      <a data-next></a>
+  </div>
+
+  <h3>Related</h3>
+  <div class="related-grid" data-related></div>
+
+</main>
+
 <!-- FOOTER PARTIAL -->
 <div id="footer"></div>
 
 <!-- Scripts -->
 <script type="module" src="../../assets/js/common/index.js" defer></script>
-<script src="page.js"></script>
+<script type="module" src="../../assets/js/work.js"></script>
 
 </body>
 </html>

@@ -127,35 +127,25 @@
 <!-- MOBILE MENU PARTIAL -->
 <div id="mobile-menu"></div>
 
-<!-- MAIN CONTENT -->
-<main>
+<main class="work-page">
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="grid-bg"></div>
-        <h1 class="page-title" data-i18n="portfolio.title">Works</h1>
-        <p class="page-subtitle" data-i18n="portfolio.description">A collection of our best projects in 3D visualization and product design.</p>
-    </section>
+  <nav data-breadcrumbs></nav>
 
-    <!-- Filter Section -->
-    <section class="filter-section">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="Food">Food</button>
-        <button class="filter-btn" data-filter="Beauty">Beauty</button>
-        <button class="filter-btn" data-filter="Jewelry">Jewelry</button>
-        <button class="filter-btn" data-filter="Tech">Tech</button>
-        <button class="filter-btn" data-filter="Fashion">Fashion</button>
-        <button class="filter-btn" data-filter="Furniture">Furniture</button>
-    </section>
+  <h1 data-work-title></h1>
+  <span data-work-category></span>
 
-    <!-- Works Grid -->
-    <section class="works-grid">
-        <div class="masonry-grid">
-            <div class="masonry-column" id="column1"></div>
-            <div class="masonry-column" id="column2"></div>
-            <div class="masonry-column" id="column3"></div>
-        </div>
-    </section>
+  <p data-work-description></p>
+
+  <div class="work-gallery" data-work-gallery></div>
+
+  <div class="work-navigation">
+      <a data-prev></a>
+      <a data-next></a>
+  </div>
+
+  <h3>Related</h3>
+  <div class="related-grid" data-related></div>
+
 </main>
 
 <!-- FOOTER PARTIAL -->
@@ -163,6 +153,6 @@
 
 <!-- Scripts -->
 <script type="module" src="../assets/js/common/index.js" defer></script>
-<script src="../assets/js/works.js" defer></script>
+<script type="module" src="../assets/js/works.js"></script>
 </body>
 </html>

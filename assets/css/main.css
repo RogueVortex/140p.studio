@@ -481,6 +481,7 @@ body {
     position: relative;
     transition: background-color 0.5s var(--ease-expo-out);
     pointer-events: none;
+    padding: 0 4rem;
 }
 
 .grid-bg {
@@ -528,10 +529,11 @@ body {
 }
 
 .hero-description {
+    position: absolute;
     font-family: 'Alumni Sans Pinstripe', sans-serif;
     max-width: 500px;
     min-height: 110px;
-    padding-top: 2rem;
+    margin-top: -235px;
     font-size: 26px;
     line-height: 1.5;
     color: var(--text-secondary);
