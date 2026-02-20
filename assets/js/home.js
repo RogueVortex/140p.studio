@@ -1,45 +1,21 @@
-// home.js (production i18n version)
+// home.js
 
 import { getCurrentLang } from './common/i18n.js';
 
+let worksCache = [];
+let observer;
+
 // ===============================
-// Portfolio Data
+// Load Works JSON
 // ===============================
 
-const portfolioData = {
-    en: [
-        { id: 1, image: '/assets/images/works/honey.jpg', title: 'Honey', category: 'Food' },
-        { id: 2, image: '/assets/images/works/essence.jpg', title: 'Essence', category: 'Beauty' },
-        { id: 3, image: '/assets/images/works/ring.jpg', title: 'Eternity', category: 'Jewelry' },
-        { id: 4, image: '/assets/images/works/tech.jpg', title: 'Tech', category: 'Tech' },
-        { id: 5, image: '/assets/images/works/chair.jpg', title: 'Comfort', category: 'Furniture' },
-        { id: 6, image: '/assets/images/works/bag.jpg', title: 'Elegance', category: 'Fashion' },
-        { id: 7, image: '/assets/images/works/glasses.jpg', title: 'Vision', category: 'Accessories' },
-        { id: 8, image: '/assets/images/works/cpu.jpg', title: 'Power', category: 'Tech' },
-        { id: 9, image: '/assets/images/works/cloud.jpg', title: 'Dream', category: 'Concept' },
-        { id: 10, image: '/assets/images/works/headphones.jpg', title: 'Sound', category: 'Audio' },
-        { id: 11, image: '/assets/images/works/brake.jpg', title: 'Speed', category: 'Automotive' },
-        { id: 12, image: '/assets/images/works/sneaker.jpg', title: 'Stride', category: 'Footwear' },
-        { id: 13, image: '/assets/images/works/soda.jpg', title: 'Fizz', category: 'Beverage' },
-        { id: 14, image: '/assets/images/works/watch.jpg', title: 'Time', category: 'Luxury' }
-    ],
-    uk: [
-        { id: 1, image: '/assets/images/works/honey.jpg', title: 'Мед', category: 'Їжа' },
-        { id: 2, image: '/assets/images/works/essence.jpg', title: 'Есенція', category: 'Краса' },
-        { id: 3, image: '/assets/images/works/ring.jpg', title: 'Вічність', category: 'Прикраси' },
-        { id: 4, image: '/assets/images/works/tech.jpg', title: 'Техніка', category: 'Техніка' },
-        { id: 5, image: '/assets/images/works/chair.jpg', title: 'Комфорт', category: 'Меблі' },
-        { id: 6, image: '/assets/images/works/bag.jpg', title: 'Елегантність', category: 'Мода' },
-        { id: 7, image: '/assets/images/works/glasses.jpg', title: 'Бачення', category: 'Аксесуари' },
-        { id: 8, image: '/assets/images/works/cpu.jpg', title: 'Потужність', category: 'Техніка' },
-        { id: 9, image: '/assets/images/works/cloud.jpg', title: 'Мрія', category: 'Концепт' },
-        { id: 10, image: 'assets/images/works/headphones.jpg', title: 'Звук', category: 'Аудіо' },
-        { id: 11, image: '/assets/images/works/brake.jpg', title: 'Швидкість', category: 'Авто' },
-        { id: 12, image: '/assets/images/works/sneaker.jpg', title: 'Крок', category: 'Взуття' },
-        { id: 13, image: '/assets/images/works/soda.jpg', title: 'Бульбашки', category: 'Напої' },
-        { id: 14, image: '/assets/images/works/watch.jpg', title: 'Час', category: 'Люкс' }
-    ]
-};
+async function loadWorks() {
+    if (worksCache.length) return worksCache;
+
+    const res = await fetch('/assets/data/works.json');
+    worksCache = await res.json();
+    return worksCache;
+}
 
 // ===============================
 // Hero animation
@@ -62,10 +38,8 @@ function animateHeroDescription() {
 }
 
 // ===============================
-// Portfolio rendering
+// Observer
 // ===============================
-
-let observer;
 
 function initObserver() {
     if (observer) observer.disconnect();
@@ -83,32 +57,55 @@ function initObserver() {
         .forEach(card => observer.observe(card));
 }
 
-function createCard(item) {
+// ===============================
+// Card Template
+// ===============================
+
+function createCard(work, lang) {
+
+    const data =
+        work.translations[lang] ||
+        work.translations.en;
+
     return `
-    <a href="works/${item.id}" class="portfolio-card-link">
-        <div class="portfolio-card">
-            <img src="${item.image}" alt="${item.title}" loading="lazy" decoding="async">
-            <div class="card-overlay"></div>
-            <div class="card-content">
-                <div class="card-category">${item.category}</div>
-                <div class="card-title">${item.title}</div>
+        <a href="/works/${work.id}/" class="portfolio-card-link">
+            <div class="portfolio-card">
+                <img src="${work.cover}" alt="${data.title}" loading="lazy" decoding="async">
+                <div class="card-overlay"></div>
+                <div class="card-content">
+                    <div class="card-category">${data.category || ''}</div>
+                    <div class="card-title">${data.title}</div>
+                </div>
             </div>
-        </div>
-    </a>      
+        </a>
     `;
 }
 
-function renderPortfolio(lang) {
+// ===============================
+// Render Portfolio (2 columns)
+// ===============================
+
+async function renderPortfolio() {
+
     const left = document.getElementById('leftColumn');
     const right = document.getElementById('rightColumn');
     if (!left || !right) return;
 
-    const data = portfolioData[lang];
-    const leftItems = data.slice(0, 7);
-    const rightItems = data.slice(7);
+    const works = await loadWorks();
+    const lang = getCurrentLang();
 
-    left.innerHTML = leftItems.map(createCard).join('');
-    right.innerHTML = rightItems.map(createCard).join('');
+    const homeWorks = works.filter(w =>
+        w.sections?.includes('home')
+    );
+
+    // делим массив пополам
+    const middle = Math.ceil(homeWorks.length / 2);
+
+    const leftItems = homeWorks.slice(0, middle);
+    const rightItems = homeWorks.slice(middle);
+
+    left.innerHTML = leftItems.map(w => createCard(w, lang)).join('');
+    right.innerHTML = rightItems.map(w => createCard(w, lang)).join('');
 
     initObserver();
 }
@@ -117,15 +114,13 @@ function renderPortfolio(lang) {
 // Init
 // ===============================
 
-function initHome() {
+async function initHome() {
 
-    const lang = getCurrentLang();
-
-    renderPortfolio(lang);
+    await renderPortfolio();
     animateHeroDescription();
-    document.addEventListener('languageChanged', (e) => {
-        renderPortfolio(e.detail.lang);
-        // Даем переводу примениться, затем перезапускаем анимацию
+
+    document.addEventListener('languageChanged', async () => {
+        await renderPortfolio();
         setTimeout(() => animateHeroDescription(), 0);
     });
 }

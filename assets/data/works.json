@@ -1,0 +1,379 @@
+[
+  {
+    "id": 1,
+    "slug": "honey",
+    "cover": "/assets/images/works/honey.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Honey",
+        "description": "Premium honey product visualization.",
+        "category": "Food",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Мед",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Їжа",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 2,
+    "slug": "essence",
+    "cover": "/assets/images/works/essence.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Essence",
+        "description": "Premium honey product visualization.",
+        "category": "Beauty",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Есенція",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Краса",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 3,
+    "slug": "Eternity",
+    "cover": "/assets/images/works/ring.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Eternity",
+        "description": "Premium honey product visualization.",
+        "category": "Jewelry",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Вічність",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Прикраси",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 4,
+    "slug": "honey",
+    "cover": "/assets/images/works/tech.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Tech",
+        "description": "Premium honey product visualization.",
+        "category": "Tech",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Техніка",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Техніка",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 5,
+    "slug": "Comfort",
+    "cover": "/assets/images/works/chair.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Comfort",
+        "description": "Premium honey product visualization.",
+        "category": "Furniture",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Комфорт",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Меблі",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 6,
+    "slug": "Elegance",
+    "cover": "/assets/images/works/bag.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Elegance",
+        "description": "Premium honey product visualization.",
+        "category": "Fashion",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Елегантність",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Мода",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 7,
+    "slug": "honey",
+    "cover": "/assets/images/works/glasses.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Vision",
+        "description": "Premium honey product visualization.",
+        "category": "Accessories",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Бачення",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Аксесуари",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 8,
+    "slug": "Power",
+    "cover": "/assets/images/works/cpu.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Power",
+        "description": "Premium honey product visualization.",
+        "category": "Tech",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Потужність",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Техніка",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 9,
+    "slug": "honey",
+    "cover": "/assets/images/works/cloud.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Dream",
+        "description": "Premium honey product visualization.",
+        "category": "Concept",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Мрія",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Концепт",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 10,
+    "slug": "honey",
+    "cover": "/assets/images/works/headphones.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Sound",
+        "description": "Premium honey product visualization.",
+        "category": "Audio",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Звук",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Аудіо",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 11,
+    "slug": "honey",
+    "cover": "/assets/images/works/brake.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Speed",
+        "description": "Premium honey product visualization.",
+        "category": "Automotive",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Швидкість",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Авто",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 12,
+    "slug": "honey",
+    "cover": "/assets/images/works/sneaker.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Stride",
+        "description": "Premium honey product visualization.",
+        "category": "Footwear",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Крок",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Взуття",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 13,
+    "slug": "honey",
+    "cover": "/assets/images/works/soda.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Fizz",
+        "description": "Premium honey product visualization.",
+        "category": "Beverage",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Бульбашки",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Напої",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  },
+
+  {
+    "id": 14,
+    "slug": "honey",
+    "cover": "/assets/images/works/watch.jpg",
+    "sections": ["home"],
+    "gallery": [
+      "/assets/images/works/honey/1.jpg",
+      "/assets/images/works/honey/2.jpg"
+    ],
+    "translations": {
+      "en": {
+        "title": "Time",
+        "description": "Premium honey product visualization.",
+        "category": "Luxury",
+        "client": "Private Client",
+        "year": "2024"
+      },
+      "uk": {
+        "title": "Час",
+        "description": "Візуалізація преміального продукту.",
+        "category": "Люкс",
+        "client": "Приватний клієнт",
+        "year": "2024"
+      }
+    }
+  }
+]
