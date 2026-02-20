@@ -159,16 +159,12 @@ function updatePageLanguage(lang) {
 }
 
 // Initialize on DOM ready
-document.addEventListener('DOMContentLoaded', () => {
-    // Initial render with current language
+document.addEventListener('app:ready', () => {
     updatePageLanguage(currentLang);
-    
-    // Listen for language changes
+
     document.addEventListener('languageChanged', (e) => {
-        // Update hero description with animation
         updatePageLanguage(e.detail.lang);
     });
-    
-    // Observe portfolio header
+
     observeElements('#portfolioHeader');
 });

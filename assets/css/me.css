@@ -1,0 +1,381 @@
+/* Page-specific styles */
+.page-hero {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 200px 4rem 64px;
+    position: relative;
+}
+
+.page-title {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 120px;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 24px;
+}
+
+/* About Section */
+.about-section {
+    padding: 0 4rem 64px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 64px;
+    align-items: start;
+}
+
+.about-image {
+    position: sticky;
+    top: 150px;
+}
+
+.about-image img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 24px;
+    transition: transform 0.6s var(--ease-expo-out);
+}
+
+.about-image:hover img {
+    transform: scale(1.02);
+}
+
+.about-content h2 {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 56px;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.about-content p {
+    font-size: 17px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+/* Stats */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin: 48px 0;
+    padding: 32px;
+    background: var(--card-bg);
+    border-radius: 20px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    color: var(--accent-green);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Services */
+.services-section {
+    margin-top: 48px;
+}
+
+.services-section h3 {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 36px;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    font-size: 15px;
+    color: var(--text-secondary);
+    transition: all 0.3s var(--ease-expo-out);
+}
+
+.service-item:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    transform: translateX(8px);
+}
+
+.service-item::before {
+    content: '→';
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+/* Skills */
+.skills-section {
+    margin-top: 48px;
+}
+
+.skills-section h3 {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 36px;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    background: var(--card-bg);
+    border: 1px solid var(--bg-secondary);
+    border-radius: 30px;
+    transition: all 0.3s var(--ease-expo-out);
+}
+
+.skill-tag:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border-color: var(--text-primary);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 64px 4rem;
+    background: var(--bg-secondary);
+    margin: 0 4rem 64px;
+    border-radius: 32px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info h2 {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-size: 64px;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.contact-info > p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 48px;
+    line-height: 1.6;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.contact-method-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-green);
+}
+
+.contact-method-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+
+.contact-method-info h4 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.contact-method-info a,
+.contact-method-info p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.contact-method-info a:hover {
+    color: var(--accent-green);
+}
+
+/* Contact Form */
+.contact-form {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 24px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    border: 1px solid transparent;
+    border-radius: 12px;
+    transition: all 0.3s var(--ease-expo-out);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-green);
+    background: var(--card-bg);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 18px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: var(--bg-primary);
+    background: var(--text-primary);
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-expo-out);
+}
+
+.submit-btn:hover {
+    background: var(--accent-green);
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .submit-btn:hover {
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .about-image {
+        position: relative;
+        top: 0;
+        max-width: 300px;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .contact-section {
+        margin: 0 2rem 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 150px 20px 32px;
+    }
+    
+    .page-title {
+        font-size: 64px;
+    }
+    
+    .about-section {
+        padding: 0 20px 48px;
+    }
+    
+    .about-content h2 {
+        font-size: 42px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .services-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-section {
+        margin: 0 20px 48px;
+        padding: 48px 20px;
+    }
+    
+    .contact-info h2 {
+        font-size: 42px;
+    }
+    
+    .contact-form {
+        padding: 24px;
+    }
+}

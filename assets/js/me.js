@@ -1,59 +1,6 @@
 /**
  * 140p Portfolio - Me Page JavaScript
  */
-
-// Animate stats numbers
-const pageTranslations = {
-    en: {
-        contact: {
-            header: "Let's Work Together",
-            description: "Have a project in mind? Let's discuss how we can help bring your vision to life."
-        },
-        about: {
-            header: 'Creative Designer & Developer',
-            description: "I'm a multidisciplinary designer with over 8 years of experience in creating compelling visual experiences. My work spans across brand identity, 3D visualization and interactive media.",
-            description2: "I believe in the power of thoughtful design to transform businesses and connect with audiences on a deeper level. Every project is an opportunity to push boundaries and create something meaningful.",
-            exp: "Years Experience",
-            projects: "Projects Completed",
-            clients: "Happy Clients"
-        },
-        services: {
-            header: "Services",
-            brand: "Brand Identity Design",
-            visualisation: "3D Visualization",
-            motion: "Motion Graphics",
-            art: "Art Direction",
-        },
-        skills: {
-            header: "Skills & Tools",
-        }
-    },
-    uk: {
-        contact: {
-            header: "Давайте работать вместе",
-            description: "У вас есть проект? Давайте обсудим, как мы можем помочь воплотить вашу идею в жизнь."
-        },
-        about: {
-            header: 'Креативный дизайнер и разработчик',
-            description: "Я — междисциплинарный дизайнер с более чем 8-летним опытом создания впечатляющих визуальных образов. Моя работа охватывает фирменный стиль, 3D-визуализацию и интерактивные медиа.",
-            description2: "Я верю в силу продуманного дизайна, способного преобразовывать бизнес и устанавливать более глубокую связь с аудиторией. Каждый проект — это возможность расширить границы возможного и создать нечто значимое.",
-            exp: "Лет опыта",
-            projects: "Завершенных проектов",
-            clients: "Счастливых клиентов"
-        },
-        services: {
-            header: "Услуги",
-            brand: "Разработка фирменного стиля",
-            visualisation: "3D-визуализация",
-            motion: "Моушн-графика",
-            art: "Художественное оформление",
-        },
-        skills: {
-            header: "Навыки и инструменты",
-        }
-    }
-};
-
 function animateStats() {
     const statNumbers = document.querySelectorAll('.stat-number');
     
@@ -175,32 +122,9 @@ function animateServices() {
     });
 }
 
-function updatePageLanguage(lang) {
-    // Update all elements with data-i18n
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.dataset.i18n;
-        const keys = key.split('.');
-        let value = pageTranslations[lang];
-        for (const k of keys) {
-            if (value[k]) value = value[k];
-        }
-        if (value) {
-            element.textContent = value;
-        }
-    });
-}
 
 // Initialize on DOM ready
-document.addEventListener('DOMContentLoaded', () => {
-    // Initial render with current language
-    updatePageLanguage(currentLang);
-
-    // Listen for language changes
-    document.addEventListener('languageChanged', (e) => {
-        // Update hero description with animation
-        updatePageLanguage(e.detail.lang);
-    });
-
+document.addEventListener('app:ready', () => {
     // Initialize animations
     animateStats();
     animateSkills();
