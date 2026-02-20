@@ -19,20 +19,10 @@
     "scroll": "Scroll"
   },
   "works": {
-    "1": {
-      "title": "Honey",
-      "category": "Food",
-      "description": "Premium honey product visualization.",
-      "client": "Private Client",
-      "year": "2024"
-    },
-    "2": {
-      "title": "Essence Branding",
-      "description": "Luxury skincare identity."
-    }
+
   },
   "r&d": {
-
+    
   },
   "me": {
     "contact": {
