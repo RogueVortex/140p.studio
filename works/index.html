@@ -13,112 +13,9 @@
     <meta property="og:type" content="website">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../assets/css/main.css">
-    <style>
-        /* Page-specific styles */
-        .page-hero {
-            min-height: 50vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 200px 4rem 64px;
-            position: relative;
-        }
-        
-        .page-title {
-            font-family: 'Alumni Sans Pinstripe', sans-serif;
-            font-size: 120px;
-            color: var(--text-primary);
-            line-height: 1;
-            margin-bottom: 24px;
-        }
-        
-        .page-subtitle {
-            font-size: 18px;
-            color: var(--text-secondary);
-            max-width: 500px;
-            line-height: 1.6;
-        }
-        
-        /* Filter buttons */
-        .filter-section {
-            padding: 0 4rem 32px;
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        
-        .filter-btn {
-            padding: 12px 24px;
-            background: var(--bg-secondary);
-            border: none;
-            border-radius: 30px;
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: all 0.3s var(--ease-expo-out);
-        }
-        
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: var(--text-primary);
-            color: var(--bg-primary);
-        }
-        
-        [data-theme="dark"] .filter-btn:hover,
-        [data-theme="dark"] .filter-btn.active {
-            background: var(--accent-green);
-            color: white;
-        }
-        
-        /* Works grid - full width */
-        .works-grid {
-            padding: 0 4rem 64px;
-        }
-        
-        .works-grid .masonry-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        
-        .works-grid .masonry-column {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-        
-        @media (max-width: 1024px) {
-            .works-grid .masonry-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .page-hero {
-                padding: 150px 20px 32px;
-            }
-            
-            .page-title {
-                font-size: 64px;
-            }
-            
-            .filter-section {
-                padding: 0 20px 24px;
-            }
-            
-            .works-grid {
-                padding: 0 20px 48px;
-            }
-            
-            .works-grid .masonry-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/main.css">
 </head>
+
 <body>
 
 <!-- HEADER PARTIAL -->
@@ -127,24 +24,25 @@
 <!-- MOBILE MENU PARTIAL -->
 <div id="mobile-menu"></div>
 
-<main class="work-page">
+<!-- MAIN CONTENT -->
+<main>
 
-  <nav data-breadcrumbs></nav>
+    <!-- Intro Section -->
+    <section class="page-intro">
+        <div class="scroll-indicator">
+            <span data-i18n="home.scroll">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+        <p class="page-description" data-i18n="works.description" data-animate-words></p>
+    </section>
 
-  <h1 data-work-title></h1>
-  <span data-work-category></span>
-
-  <p data-work-description></p>
-
-  <div class="work-gallery" data-work-gallery></div>
-
-  <div class="work-navigation">
-      <a data-prev></a>
-      <a data-next></a>
-  </div>
-
-  <h3>Related</h3>
-  <div class="related-grid" data-related></div>
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="works">
+        <div class="masonry-grid">
+            <div class="masonry-column left" id="leftColumn"></div>
+            <div class="masonry-column right" id="rightColumn"></div>
+        </div>
+    </section>
 
 </main>
 
@@ -152,7 +50,8 @@
 <div id="footer"></div>
 
 <!-- Scripts -->
-<script type="module" src="../assets/js/common/index.js" defer></script>
-<script type="module" src="../assets/js/works.js"></script>
+<script type="module" src="../../assets/js/common/index.js" defer></script>
+<script type="module" src="../../assets/js/works.js" defer></script>
+
 </body>
 </html>

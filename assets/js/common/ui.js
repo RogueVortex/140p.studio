@@ -1,4 +1,11 @@
 // ui.js
+// ======================================================
+// UI MODULE – Production Version
+// ======================================================
+
+// ========================================
+// Mobile Menu
+// ========================================
 
 export function initMobileMenu() {
     const burger = document.getElementById('burgerBtn');
@@ -12,6 +19,10 @@ export function initMobileMenu() {
     });
 }
 
+// ========================================
+// Scroll To Top
+// ========================================
+
 export function initScrollToTop() {
     const btn = document.getElementById('scrollTopBtn');
     if (!btn) return;
@@ -24,38 +35,69 @@ export function initScrollToTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
+
 // ========================================
-// Scroll Animation Observer
+// Universal Scroll Observer
 // ========================================
 
-let scrollObserver;
+let globalObserver;
 
 function createObserver() {
     return new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
+            if (!entry.isIntersecting) return;
+
+            // Обычная анимация появления
+            if (entry.target.classList.contains('animate-on-scroll')) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
             }
+
+            // Word animation
+            if (entry.target.hasAttribute('data-animate-words')) {
+                animateWords(entry.target);
+            }
+
+            observer.unobserve(entry.target);
         });
     }, {
-        threshold: 0.1,
+        threshold: 0.2,
         rootMargin: '0px 0px -50px 0px'
     });
 }
 
 export function initScrollAnimations() {
 
-    if (!scrollObserver) {
-        scrollObserver = createObserver();
+    if (!globalObserver) {
+        globalObserver = createObserver();
     }
 
-    document.querySelectorAll('.animate-on-scroll')
-        .forEach(el => scrollObserver.observe(el));
+    document.querySelectorAll('.animate-on-scroll, [data-animate-words]')
+        .forEach(el => globalObserver.observe(el));
 }
 
 // ========================================
-// Active Navigation
+// Word Animation
+// ========================================
+
+function animateWords(element) {
+
+    const text = element.textContent.trim();
+    if (!text) return;
+
+    const words = text.split(' ');
+    element.innerHTML = '';
+
+    words.forEach((word, index) => {
+        const span = document.createElement('span');
+        span.className = 'word';
+        span.textContent = word;
+        span.style.animationDelay = `${0.6 + index * 0.03}s`;
+        element.appendChild(span);
+    });
+}
+
+// ========================================
+// Active Navigation (Nested Support)
 // ========================================
 
 export function initActiveNav() {
@@ -66,7 +108,12 @@ export function initActiveNav() {
 
         const linkPath = normalizePath(link.getAttribute('href'));
 
-        if (linkPath === currentPath) {
+        if (linkPath === '/' && currentPath === '/') {
+            link.classList.add('active');
+            return;
+        }
+
+        if (linkPath !== '/' && currentPath.startsWith(linkPath)) {
             link.classList.add('active');
         } else {
             link.classList.remove('active');
@@ -78,13 +125,9 @@ function normalizePath(path) {
 
     if (!path) return '/';
 
-    // Убираем домен если есть
     path = path.replace(location.origin, '');
-
-    // Убираем index.html
     path = path.replace('index.html', '');
 
-    // Гарантируем слеш в конце
     if (!path.endsWith('/')) path += '/';
 
     return path;

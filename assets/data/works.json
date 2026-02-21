@@ -2,7 +2,7 @@
   {
     "id": 1,
     "cover": "/assets/images/works/honey.jpg",
-    "sections": ["home"],
+    "sections": ["home", "works"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -26,7 +26,7 @@
   {
     "id": 2,
     "cover": "/assets/images/works/essence.jpg",
-    "sections": ["home"],
+    "sections": ["home", "rnd"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -50,7 +50,7 @@
   {
     "id": 3,
     "cover": "/assets/images/works/ring.jpg",
-    "sections": ["home"],
+    "sections": ["home", "works"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -74,7 +74,7 @@
   {
     "id": 4,
     "cover": "/assets/images/works/tech.jpg",
-    "sections": ["home"],
+    "sections": ["home", "works"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -98,7 +98,7 @@
   {
     "id": 5,
     "cover": "/assets/images/works/chair.jpg",
-    "sections": ["home"],
+    "sections": ["home", "works"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -122,7 +122,7 @@
   {
     "id": 6,
     "cover": "/assets/images/works/bag.jpg",
-    "sections": ["home"],
+    "sections": ["home", "rnd"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -146,7 +146,7 @@
   {
     "id": 7,
     "cover": "/assets/images/works/glasses.jpg",
-    "sections": ["home"],
+    "sections": ["home", "works"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -170,7 +170,7 @@
   {
     "id": 8,
     "cover": "/assets/images/works/cpu.jpg",
-    "sections": ["home"],
+    "sections": ["home", "rnd"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -194,7 +194,7 @@
   {
     "id": 9,
     "cover": "/assets/images/works/cloud.jpg",
-    "sections": ["home"],
+    "sections": ["home", "works"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -218,7 +218,7 @@
   {
     "id": 10,
     "cover": "/assets/images/works/headphones.jpg",
-    "sections": ["home"],
+    "sections": ["home", "rnd"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -242,7 +242,7 @@
   {
     "id": 11,
     "cover": "/assets/images/works/brake.jpg",
-    "sections": ["home"],
+    "sections": ["home", "rnd"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -266,7 +266,7 @@
   {
     "id": 12,
     "cover": "/assets/images/works/sneaker.jpg",
-    "sections": ["home"],
+    "sections": ["home", "works"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -290,7 +290,7 @@
   {
     "id": 13,
     "cover": "/assets/images/works/soda.jpg",
-    "sections": ["home"],
+    "sections": ["home", "rnd"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"
@@ -314,7 +314,7 @@
   {
     "id": 14,
     "cover": "/assets/images/works/watch.jpg",
-    "sections": ["home"],
+    "sections": ["home", "works"],
     "gallery": [
       "/assets/images/works/honey/1.jpg",
       "/assets/images/works/honey/2.jpg"

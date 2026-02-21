@@ -12,19 +12,17 @@
     "tagline": "Designed with passion"
   },
   "home": {
-    "hero": {
-      "title": "Creative Studio",
-      "description": "140p is a team of experts in 3D visualization, graphic design, and web development. We create visual solutions that help brands stand out and effectively communicate with their audience."
-    },
+    "description": "140p is a team of experts in 3D visualization and graphic design. We create visual solutions that help brands stand out and effectively communicate with their audience.",
     "scroll": "Scroll"
   },
   "works": {
-
+    "description": "Our works. Our works. Our works. Our works. Our works. Our works. Our works. Our works. Our works. Our works."
   },
-  "r&d": {
-
+  "rnd": {
+    "description": "Our experiments and research. Our experiments and research. Our experiments and research. Our experiments and research. Our experiments and research. "
   },
   "me": {
+    "description": "Every project is an opportunity to push boundaries and create something meaningful.",
     "contact": {
       "header": "Let's Work Together",
       "description": "Have a project in mind? Let's discuss how we can help bring your vision to life."
@@ -32,7 +30,6 @@
     "about": {
       "header": "Creative Designer & Developer",
       "description": "I'm a multidisciplinary designer with over 8 years of experience in creating compelling visual experiences. My work spans across brand identity, 3D visualization and interactive media.",
-      "description2": "I believe in the power of thoughtful design to transform businesses and connect with audiences on a deeper level. Every project is an opportunity to push boundaries and create something meaningful.",
       "exp": "Years Experience",
       "projects": "Projects Completed",
       "clients": "Happy Clients"
